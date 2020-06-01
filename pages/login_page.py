@@ -11,11 +11,11 @@ class LoginPage(BasePage):
 
     def should_be_login_url(self):
         # реализуйте проверку на корректный url адрес
-        page = MainPage(self.browser, self.url)
-        page.open()
-        page.should_be_login_link()
-        login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
-        login_link.click()
+        # page = MainPage(self.browser, self.url)
+        # page.open()
+        # page.should_be_login_link()
+        # login_link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
+        # login_link.click()
         cur_url = self.browser.current_url
         assert "login" in cur_url, f"Substring 'login' is not found in string: {cur_url}"
 
