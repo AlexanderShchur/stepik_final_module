@@ -34,3 +34,15 @@ class ProductPage(BasePage):
         add_button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_FORM)
         add_button.click()
         self.solve_quiz_and_get_code()
+
+    def add_to_basket_without_quiz(self):
+        add_button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_FORM)
+        add_button.click()
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is presented, but should not be"
+
+    def should_disappear_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+            "Success message is disappeared"
