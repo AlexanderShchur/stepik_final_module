@@ -4,6 +4,12 @@ from selenium.webdriver.common.by import By
 class BasePageLocators():
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_BUTTON = (By.CSS_SELECTOR, ".btn-group > a:nth-child(1)")
+
+
+class BasketPageLocators():
+    BASKET_CONTAINS_PRODUCTS = (By.CSS_SELECTOR, "#.basket-items > div:nth-child(1)")
+    BASKET_IS_EMPTY_MESSAGE = (By.CSS_SELECTOR, "#content_inner > p:nth-child(1)")
 
 
 class MainPageLocators():
@@ -22,3 +28,4 @@ class ProductPageLocators():
     GET_PRICE_ON_BASKET_ALERT = (By.CSS_SELECTOR, "#messages > div.alert.alert-safe.alert-noicon.alert-info.fade.in > div > p:nth-child(1) > strong")
     GET_PRODUCT_PRICE = (By.CSS_SELECTOR, "#content_inner > article > div.row > div.col-sm-6.product_main > p.price_color")
     SUCCESS_MESSAGE = (By.CSS_SELECTOR, "#messages > div:nth-child(1) > div")
+
