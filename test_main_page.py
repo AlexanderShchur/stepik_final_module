@@ -41,8 +41,3 @@ def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     basket_page = BasketPage(browser, browser.current_url)
     basket_page.is_basket_empty_check()
     basket_page.presence_of_empty_basket_alert()
-
-# def test_presence_login_register_form(browser):
-#     link = "http://selenium1py.pythonanywhere.com/"
-#     page = LoginPage(browser, link)
-#     page.should_be_login_page()
